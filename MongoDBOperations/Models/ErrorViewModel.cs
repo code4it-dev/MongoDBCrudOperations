@@ -1,5 +1,3 @@
-using System;
-
 namespace MongoDBOperations.Models
 {
     public class ErrorViewModel

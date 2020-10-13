@@ -1,17 +1,15 @@
 ﻿using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 
-namespace MongoDBOperations.Models
+namespace BoardGameAPI.Models
 {
     public class Game
     {
-        // System.FormatException: 'Element '_id' does not match any field or property of class MongoDBOperations.Models.Game.'
+        /** NOTE: if you want to try the native Id handling, uncomment the line below and comment the AnotherId field*/
+        // public ObjectId Id { get; set; }
 
         [BsonId]
-
-        public ObjectId Id { get; set; }
-
-
+        public string AnotherId { get; set; }
 
         [BsonElement("title")]
         public string Name { get; set; }
